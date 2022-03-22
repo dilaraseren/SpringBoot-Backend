@@ -52,7 +52,7 @@ public class UserController {
         return ResponseEntity.ok(new GenericResponse("User Deleted !"));
     }
 
-    // More performance
+
     @GetMapping("v1/user/slice")
     public ResponseEntity<List<UserViewDTO>> slice(Pageable pageable) {
         final List<UserViewDTO> users = userService.slice(pageable);

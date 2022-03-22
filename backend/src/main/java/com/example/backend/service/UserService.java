@@ -18,5 +18,6 @@ public interface UserService {
     UserViewDTO updateUser(Long id, UserUpdateDTO userUpdateDTO);
 
     void deleteUser(Long id);
+
     List<UserViewDTO> slice(Pageable pageable);
 }

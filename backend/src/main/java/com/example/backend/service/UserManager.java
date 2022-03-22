@@ -27,6 +27,7 @@ import java.util.stream.Collectors;
 public class UserManager implements UserService {
 
     private final UserRepository userRepository;
+
     @Override
     @Transactional(readOnly=true,propagation= Propagation.SUPPORTS)
     public UserViewDTO getUserById(Long id) {

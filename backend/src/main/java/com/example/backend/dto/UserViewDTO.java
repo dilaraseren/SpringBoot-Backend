@@ -12,13 +12,16 @@ public final class UserViewDTO implements Serializable {
 
     private final String firstName;
     private final String lastName;
+    private final String userName;
 
-    private UserViewDTO(String firstName, String lastName) {
+    private UserViewDTO( String userName,String firstName, String lastName) {
+        this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
+
     }
 
     public static UserViewDTO of(User user){
-        return new UserViewDTO(user.getFirstName(), user.getLastName());
+        return new UserViewDTO( user.getUsername(),user.getFirstName(), user.getLastName());
     }
 }
